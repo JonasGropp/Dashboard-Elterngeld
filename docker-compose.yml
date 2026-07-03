@@ -1,0 +1,10 @@
+# Start als Website mit einem Befehl:  docker compose up -d
+# Danach erreichbar unter:             http://<server-ip>:8501
+
+services:
+  elterngeld-planner:
+    build: .
+    container_name: elterngeld-planner
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
